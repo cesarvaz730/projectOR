@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[Log_errores](
+	[NO_ORDEN] [nvarchar](40) NOT NULL,
+	[STATUS] [nvarchar](20) NULL,
+	[CODIGO_MENSAJE] [numeric](4, 0) NULL,
+	[FECHA_ERROR] [nvarchar](10) NULL,
+	[HORA_ERROR] [nvarchar](10) NULL,
+	[PROCESADO] [nvarchar](2) NULL,
+	[MENSAJE] [nvarchar](255) NULL,
+	[RFC] [nvarchar](16) NULL,
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[CLIENTE] [nvarchar](255) NULL,
+	[ID_CS] [int] NULL,
+ CONSTRAINT [PK_Log_Errores] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>projectOR</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b254712f-fcbd-4059-a5b2-168b3113c320}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>projectOR</RootNamespace>
+    <AssemblyName>projectOR</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Sequences\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ALTA_CARGA_ROBOT.sql" />
+    <Build Include="dbo\Tables\ALTAS.sql" />
+    <Build Include="dbo\Tables\CARGA_ROBOT.sql" />
+    <Build Include="dbo\Tables\CCB_Consulta.sql" />
+    <Build Include="dbo\Tables\CCB_CORTA_IMSS.sql" />
+    <Build Include="dbo\Tables\CCB_CORTA_INSABI.sql" />
+    <Build Include="dbo\Tables\CCB_CORTA_POSICION.sql" />
+    <Build Include="dbo\Tables\CCB_Suministro.sql" />
+    <Build Include="dbo\Tables\CONSULTA_POS.sql" />
+    <Build Include="dbo\Tables\INTERLOCUTORES.sql" />
+    <Build Include="dbo\Tables\INTERLOCUTORES_INSABI.sql" />
+    <Build Include="dbo\Tables\Listado_SC.sql" />
+    <Build Include="dbo\Tables\Log_errores.sql" />
+    <Build Include="dbo\Views\confirmation_insabi_view.sql" />
+    <Build Include="dbo\Views\confirmation_view.sql" />
+    <Build Include="Security\UsrRobotORDEV.sql" />
+    <Build Include="Security\UsrPOAutoORDEV.sql" />
+    <Build Include="Security\UsrAutoORDEV.sql" />
+    <Build Include="Security\NT AUTHORITY_SYSTEM.sql" />
+    <Build Include="Security\FARMAYPO_novis.sql.sql" />
+    <Build Include="Security\FARMAYPO_jorge.chavero.sql" />
+    <Build Include="Security\FARMAYPO_cesar.vazquez.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\split.sql" />
+    <Build Include="dbo\Functions\udf-Str-Parse.sql" />
+    <Build Include="dbo\Stored Procedures\errorsAutOR.sql" />
+    <Build Include="dbo\Stored Procedures\ProcedureAltas.sql" />
+    <Build Include="dbo\Stored Procedures\ProcedureOrders.sql" />
+    <Build Include="dbo\Stored Procedures\ProcedureOrdersv2.sql" />
+    <Build Include="dbo\Stored Procedures\updateIDCSAutOR.sql" />
+    <Build Include="dbo\Stored Procedures\validateFields.sql" />
+    <Build Include="dbo\Sequences\sequense_error.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+  </ItemGroup>
+</Project>

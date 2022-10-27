@@ -1,0 +1,17 @@
+﻿ALTER ROLE [db_owner] ADD MEMBER [UsrRobotORDEV]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [UsrPOAutoORDEV]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [UsrAutoORDEV]
+GO
+ALTER ROLE [db_accessadmin] ADD MEMBER [NT AUTHORITY\SYSTEM]
+GO
+ALTER ROLE [db_securityadmin] ADD MEMBER [NT AUTHORITY\SYSTEM]
+GO
+ALTER ROLE [db_backupoperator] ADD MEMBER [NT AUTHORITY\SYSTEM]
+GO
+ALTER ROLE [db_backupoperator] ADD MEMBER [FARMAYPO\novis.sql]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [FARMAYPO\jorge.chavero]
+GO
+ALTER ROLE [db_owner] ADD MEMBER [FARMAYPO\cesar.vazquez]

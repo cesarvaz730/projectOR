@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[Listado_SC](
+	[ID_CS] [int] NOT NULL,
+	[NOMBRE_SC] [nvarchar](60) NULL,
+	[USUARIO] [nvarchar](40) NULL,
+	[PASSWORD] [nvarchar](40) NULL,
+	[TODAS_CLAVES] [nvarchar](2) NOT NULL,
+	[SUMINIS_LOTE] [nvarchar](2) NOT NULL,
+	[PREFIJO_ARCHIVO] [nvarchar](20) NULL,
+	[CLASE_DOCUMENTO] [nvarchar](4) NULL,
+	[CENTRO] [nvarchar](4) NULL,
+	[ORG_VENTAS] [nvarchar](4) NULL,
+	[CANAL] [int] NULL,
+	[PROCESADO] [nvarchar](2) NULL,
+	[RFC] [nvarchar](16) NOT NULL,
+	[MAIL_DESTINATARIO] [nvarchar](255) NULL,
+	[TELEFONO_DESTINATARIO] [nvarchar](255) NULL,
+	[CLIENTE] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_Listado_SC] PRIMARY KEY CLUSTERED 
+(
+	[ID_CS] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]

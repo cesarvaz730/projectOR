@@ -1,0 +1,35 @@
+﻿CREATE TABLE [dbo].[CONSULTA_POS](
+	[NO_ORDEN] [nvarchar](40) NOT NULL,
+	[PEDIDO_SAP] [nvarchar](10) NOT NULL,
+	[POS] [nvarchar](6) NOT NULL,
+	[MATERIAL] [nvarchar](18) NOT NULL,
+	[DELIVERY] [nvarchar](10) NULL,
+	[PROCEDENCIA] [nvarchar](30) NULL,
+	[CB] [nvarchar](30) NULL,
+	[CCB] [nvarchar](35) NULL,
+	[DESCRIPCION] [nvarchar](400) NULL,
+	[CANTIDAD] [nvarchar](17) NULL,
+	[LOTE] [nvarchar](10) NULL,
+	[PESO] [nvarchar](15) NULL,
+	[ALTO] [nvarchar](15) NULL,
+	[ANCHO] [nvarchar](15) NULL,
+	[PROFUNDIDAD] [nvarchar](15) NULL,
+	[UN_ENVASE] [nvarchar](5) NULL,
+	[BULTOS] [nvarchar](5) NULL,
+	[NUM_REMISI] [nvarchar](10) NULL,
+	[FECHA_CAD] [nvarchar](10) NULL,
+	[FECHA_FAB] [nvarchar](10) NULL,
+	[MARCA] [nvarchar](20) NULL,
+	[FECHA_LIMITE] [nvarchar](10) NULL,
+	[STATUS] [nvarchar](20) NULL,
+	[FECHA_INSERCION] [nvarchar](10) NULL,
+	[HORA_CREACION] [nvarchar](10) NULL,
+	[PROCESADO] [nvarchar](1) NULL,
+ CONSTRAINT [PK_CONSULTA_POS] PRIMARY KEY CLUSTERED 
+(
+	[NO_ORDEN] ASC,
+	[PEDIDO_SAP] ASC,
+	[POS] ASC,
+	[MATERIAL] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
