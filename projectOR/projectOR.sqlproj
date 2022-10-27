@@ -82,9 +82,6 @@
     <Build Include="dbo\Tables\Log_errores.sql" />
     <Build Include="dbo\Views\confirmation_insabi_view.sql" />
     <Build Include="dbo\Views\confirmation_view.sql" />
-    <Build Include="Security\UsrRobotORDEV.sql" />
-    <Build Include="Security\UsrPOAutoORDEV.sql" />
-    <Build Include="Security\UsrAutoORDEV.sql" />
     <Build Include="Security\NT AUTHORITY_SYSTEM.sql" />
     <Build Include="Security\FARMAYPO_novis.sql.sql" />
     <Build Include="Security\FARMAYPO_jorge.chavero.sql" />
