@@ -8,6 +8,7 @@
 	[HORA_CREACION] [nvarchar](255) NULL,
 	[ID_CS] [int] NULL,
  [testColumNew] INT NULL, 
+    [prueba2_colnew] NCHAR(10) NULL, 
     CONSTRAINT [PK_ALTA_CARGA_ROBOT] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
